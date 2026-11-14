@@ -1,59 +1,80 @@
-# Awesome macOS Spreadsheets [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome Open-Source Spreadsheet Apps for macOS
 
-> Free and open-source spreadsheet applications that can be used locally on macOS, without requiring an account or cloud service.
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![macOS](https://img.shields.io/badge/platform-macOS-111111?logo=apple)](https://www.apple.com/macos/) [![Free & open source](https://img.shields.io/badge/free-%26%20open%20source-2ea44f)](#selection-criteria)
 
-This is a **curated list, not a ranking**. Entries are included only when the project is a genuine spreadsheet app or spreadsheet-oriented terminal tool, is free/open source, and has a credible local macOS use path. Most can operate entirely offline after download/installation. Optional cloud connectors are called out. “No telemetry” is not a blanket security guarantee: check the app’s current documentation and network behavior for your own requirements.
+> Find the right free, open-source spreadsheet for your Mac: offline-capable desktop apps, Excel-compatible office suites, and keyboard-first terminal tools—with privacy and platform caveats up front.
 
-## Contents
+Looking for an **Excel alternative for Mac** that doesn’t make your spreadsheets depend on a cloud account? Start here. This independent directory compares local-capable macOS spreadsheet software by app type, license, and practical Mac support, so you can choose a tool that fits your workflow—not a subscription pitch.
 
-- [Desktop apps](#desktop-apps)
-- [Terminal apps](#terminal-apps)
-- [Not included in the top list](#not-included-in-the-top-list)
-- [Criteria and privacy notes](#criteria-and-privacy-notes)
-- [Contributing](#contributing)
+**Quick picks:** [LibreOffice Calc](#desktop-spreadsheet-apps) for a full-featured general-purpose spreadsheet · [ONLYOFFICE](#desktop-spreadsheet-apps) for OOXML compatibility · [sc-im](#terminal-spreadsheets--data-tools) for a keyboard-driven terminal spreadsheet.
 
-## Desktop apps
+⭐ If this list helps you, **star the repo** so other Mac users can find it. Have a correction or a genuinely useful app to add? [Open an issue](https://github.com/Merchkaiser/awesome-macos-spreadsheets/issues) or [submit a pull request](https://github.com/Merchkaiser/awesome-macos-spreadsheets/pulls).
 
-1. **[LibreOffice Calc](https://www.libreoffice.org/discover/calc/)** — Mature, full-featured desktop spreadsheet with broad formula and file-format support. Free and open source; runs locally and can be used without an account or cloud service. Optional online integrations are not required. [Download](https://www.libreoffice.org/download/) · [Source](https://github.com/LibreOffice/core) · MPL-2.0/LGPL-3.0-or-later (project components may use other licenses).
+## At a glance
 
-2. **[ONLYOFFICE Desktop Editors](https://www.onlyoffice.com/desktop.aspx)** — Desktop suite with a spreadsheet editor and strong OOXML compatibility. The desktop app can edit local files without signing in; cloud connections and AI integrations are optional. [Download](https://www.onlyoffice.com/download-desktop.aspx) · [Source](https://github.com/ONLYOFFICE/DesktopEditors) · AGPL-3.0.
+| App | Best for | macOS experience | License |
+| --- | --- | --- | --- |
+| [LibreOffice Calc](#desktop-spreadsheet-apps) | Full-featured, everyday spreadsheet work | Official desktop builds | MPL-2.0 / LGPL-3.0-or-later* |
+| [ONLYOFFICE Desktop Editors](#desktop-spreadsheet-apps) | Excel/OOXML-oriented workflows | Official desktop builds | AGPL-3.0 |
+| [Apache OpenOffice Calc](#desktop-spreadsheet-apps) | Familiar, local office suite | Official Mac downloads; check current compatibility | Apache-2.0 |
+| [Calligra Sheets](#desktop-spreadsheet-apps) | KDE/Calligra suite users | Mac availability may require extra setup | LGPL-2.1-or-later* |
+| [Gnumeric](#desktop-spreadsheet-apps) | Spreadsheet-focused analysis | Community/package-manager setup; not a mainstream Mac build | GPL-2.0-or-later |
+| [Pyspread](#desktop-spreadsheet-apps) | Python-powered, unconventional spreadsheets | Python/GUI dependency setup | GPL-3.0-or-later |
+| [900Sheets](#desktop-spreadsheet-apps) | Newer local-first desktop spreadsheet | macOS build workflow; review release status | Apache-2.0 |
+| [sc-im](#terminal-spreadsheets--data-tools) | Vim-like terminal spreadsheet editing | Terminal; install/build dependencies | ISC* |
+| [VisiData](#terminal-spreadsheets--data-tools) | Exploring and transforming tabular files | Terminal + Python | GPL-3.0 |
+| [sc](#terminal-spreadsheets--data-tools) | Classic Unix terminal spreadsheet | Terminal; legacy/enthusiast option | Verify upstream/package license |
 
-3. **[Apache OpenOffice Calc](https://www.openoffice.org/product/calc.html)** — Offline desktop spreadsheet in the Apache OpenOffice suite. Includes local spreadsheet editing and common spreadsheet features; releases and macOS compatibility may lag behind LibreOffice, so check the current download’s platform requirements. [Download](https://www.openoffice.org/download/) · [Source](https://github.com/apache/openoffice) · Apache-2.0.
+## Desktop spreadsheet apps
 
-4. **[Calligra Sheets](https://calligra.org/sheets/)** — Spreadsheet component of the Calligra suite. Open source and local-first; macOS packaging/support may be less straightforward than the mainstream options, so verify current macOS build availability before installing. [Project/source](https://invent.kde.org/office/calligra) · LGPL-2.1-or-later (verify component licensing).
+1. **[LibreOffice Calc](https://www.libreoffice.org/discover/calc/)** — The strongest all-round free Excel alternative for Mac: a mature spreadsheet with formulas, charts, pivot tables, and broad file-format support. Use local files without an account; optional online features are not required. Get the [official macOS download](https://www.libreoffice.org/download/) or browse the [source](https://github.com/LibreOffice/core). **License:** MPL-2.0 and LGPL-3.0-or-later; components may have additional licenses.
 
-5. **[Gnumeric](https://gnome.pages.gitlab.gnome.org/gnumeric-web/)** — Spreadsheet-focused desktop application known for its analysis and formula tools. Runs locally. macOS is not its primary distribution target and may require a package manager, X11/XQuartz, or building from source; confirm current support before relying on it. [Source](https://gitlab.gnome.org/GNOME/gnumeric) · GPL-2.0-or-later.
+2. **[ONLYOFFICE Desktop Editors](https://www.onlyoffice.com/desktop.aspx)** — A polished office suite with a spreadsheet editor and strong Microsoft Office/OOXML compatibility. The desktop app can work on local files without a cloud account; cloud connections and AI integrations are optional. [macOS download](https://www.onlyoffice.com/download-desktop.aspx) · [Source](https://github.com/ONLYOFFICE/DesktopEditors) · **AGPL-3.0**.
 
-6. **[Pyspread](https://pyspread.gitlab.io/)** — A distinctive Python-based spreadsheet with a grid-oriented interface and Python expressions. Free/open source and local; installation on macOS uses Python and GUI dependencies, so it is best for technically comfortable users. [Source](https://gitlab.com/pyspread/pyspread) · GPL-3.0-or-later.
+3. **[Apache OpenOffice Calc](https://www.openoffice.org/product/calc.html)** — A familiar spreadsheet in a free, offline-capable office suite. It has official Mac downloads, but its release pace and macOS compatibility can lag; compare current requirements with LibreOffice before choosing it. [Download](https://www.openoffice.org/download/) · [Source](https://github.com/apache/openoffice) · **Apache-2.0**.
 
-7. **[900Sheets](https://github.com/900Labs/900Sheets)** — Local-first spreadsheet desktop app with a native macOS build workflow, local workbooks, and common exchange formats. Newer and less mature than the established suites; inspect compatibility notes and release provenance before using it for important data. Its project describes the app as offline-capable and without telemetry or an account requirement. [Source and build instructions](https://github.com/900Labs/900Sheets) · Apache-2.0.
+4. **[Calligra Sheets](https://calligra.org/sheets/)** — The spreadsheet app in the Calligra suite, suited to users already in the KDE ecosystem. It is local and open source, though a convenient, current macOS package may be harder to find than for LibreOffice or ONLYOFFICE. Check the [project](https://calligra.org/) and [source](https://invent.kde.org/office/calligra) for current Mac options. **License:** LGPL-family; verify the specific component’s license.
 
-## Terminal apps
+5. **[Gnumeric](https://gnome.pages.gitlab.gnome.org/gnumeric-web/)** — A spreadsheet-first application with a long history of strong formula and data-analysis features. It runs locally, but macOS is not its primary distribution target: expect package-manager, X11/XQuartz, or build-from-source setup rather than a standard Mac app download. [GNOME source](https://gitlab.gnome.org/GNOME/gnumeric) · **GPL-2.0-or-later**.
 
-8. **[sc-im](https://github.com/andmarti1424/sc-im)** — Vim-inspired ncurses spreadsheet program for the terminal. Runs locally on macOS when installed/built with its dependencies; suitable for keyboard-driven editing of tabular sheets. [Source and installation instructions](https://github.com/andmarti1424/sc-im) · ISC (see the repository’s license file).
+6. **[Pyspread](https://pyspread.gitlab.io/)** — A specialist spreadsheet that uses Python expressions in cells, for people who want a programmable grid rather than a conventional Excel clone. Open source and local; installation on macOS involves Python and GUI dependencies. [Project and install guidance](https://pyspread.gitlab.io/) · [Source](https://gitlab.com/pyspread/pyspread) · **GPL-3.0-or-later**.
 
-9. **[VisiData](https://www.visidata.org/)** — Terminal interface for exploring, editing, and arranging tabular data, including CSV, TSV, and Excel files. It is a versatile data tool rather than a conventional full spreadsheet replacement; works locally on macOS with Python. [Install/docs](https://www.visidata.org/install/) · [Source](https://github.com/saulpw/visidata) · GPL-3.0.
+7. **[900Sheets](https://github.com/900Labs/900Sheets)** — A newer local-first spreadsheet project focused on editable local workbooks and common import/export workflows. It is much less established than the major office suites; review its compatibility notes, release artifacts, and signing/notarization status before using it for important work. [Source, build instructions, and project privacy claims](https://github.com/900Labs/900Sheets) · **Apache-2.0**.
 
-10. **[sc (Spreadsheet Calculator)](https://www.ibiblio.org/pub/Linux/apps/financial/spreadsheet/)** — Classic terminal spreadsheet for Unix-like systems. It can be built/run locally on macOS, but development and documentation are comparatively quiet; treat as a legacy/enthusiast option and check the package’s current source and license before installing. [Source archive and references](https://www.ibiblio.org/pub/Linux/apps/financial/spreadsheet/).
+## Terminal spreadsheets & data tools
 
-## Not included in the top list
+8. **[sc-im](https://github.com/andmarti1424/sc-im)** — A capable ncurses spreadsheet for the terminal, with Vim-inspired keyboard controls. A good fit for keyboard-first workflows and users comfortable installing command-line dependencies; it edits data locally. [Source and installation instructions](https://github.com/andmarti1424/sc-im) · **ISC** (see upstream license file).
 
-- **EtherCalc** is a collaborative web application/server, not a standalone macOS spreadsheet app. A self-hosted instance may be run locally, but it does not meet the same simple offline desktop-app criteria.
-- **GNU Oleo** is an old, effectively legacy spreadsheet project and is not recommended as a current macOS option.
-- **SoloSheet / GridCraft**: not included until their official source, license, macOS distribution, and local/offline behavior can be independently verified well enough for this list.
+9. **[VisiData](https://www.visidata.org/)** — A powerful terminal tool for exploring, editing, and reshaping CSV, TSV, Excel, and many other tabular formats. It is excellent for data work, but is **not a like-for-like desktop Excel replacement**. Runs locally on macOS with Python. [Install](https://www.visidata.org/install/) · [Source](https://github.com/saulpw/visidata) · **GPL-3.0**.
 
-## Criteria and privacy notes
+10. **[sc (Spreadsheet Calculator)](https://www.ibiblio.org/pub/Linux/apps/financial/spreadsheet/)** — A classic Unix terminal spreadsheet that can interest command-line enthusiasts. Its maintenance and modern macOS experience are limited compared with current desktop apps; treat it as a legacy option and verify the source and license supplied by your package. [Project/archive references](https://www.ibiblio.org/pub/Linux/apps/financial/spreadsheet/).
 
-- Entries must be free to use and have an open-source license for the relevant application.
-- The application must be usable on macOS, either through a maintained macOS build or a documented local source/package-manager installation. Entries with caveats say so.
-- A network connection may be needed to download/install software, check updates, or use optional cloud features. “Local-only” here means spreadsheet files can be created/edited locally without a hosted account or required cloud storage; it does **not** assert that every build makes zero network requests in every configuration.
-- “No telemetry” claims are not independently guaranteed by this list. Disable optional online features and audit the relevant version/build if zero network traffic is a strict requirement. A firewall or network monitor can help verify behavior.
-- macOS support, minimum OS versions, licenses, and project activity change. Check each project’s official release notes and license before adoption.
+## How to choose
+
+- **Want the best all-round free Mac spreadsheet?** Try **LibreOffice Calc** first.
+- **Need Microsoft Office file-format compatibility?** Compare **ONLYOFFICE** and **LibreOffice** with your actual XLSX files.
+- **Want a conventional GUI?** Choose one of the desktop apps above; **VisiData** and **sc-im** are terminal tools, not drop-in graphical replacements.
+- **Want local-first software?** These projects can work on local files, but online integrations, update checks, and optional services differ by app and build.
+- **Need zero network traffic?** Don’t rely on a list description alone. Test the exact version, disable online features, and monitor or block network access.
+
+## Selection criteria
+
+Apps are included because they are free/open source, spreadsheet-oriented, and have a plausible way to use them locally on macOS. This list is **not a ranking or a security audit**. To keep it useful, Mac distribution caveats and project maturity are stated rather than hidden.
+
+**Privacy, plainly:** “Can edit local files” does not prove “never sends network traffic.” This list does not independently certify that every app, build, plugin, update checker, or optional feature is telemetry-free. If no telemetry or network access is a hard requirement, inspect the source and privacy documentation for the exact release, turn off optional services, and verify traffic yourself. Internet access may be needed to download or update an app.
+
+Project support, minimum macOS versions, licenses, and privacy behavior change. Follow the official links for current requirements and license terms. *A license marked with an asterisk should be confirmed in the upstream license file for the version/component you use.*
+
+## Not included
+
+- **EtherCalc** — primarily a collaborative web application/server, not a standalone macOS spreadsheet app.
+- **GNU Oleo** — legacy software without a practical current macOS recommendation.
+- **Unverified newcomers** — projects such as SoloSheet or GridCraft should be added when their official source, license, Mac support, and offline behavior can be checked reliably.
 
 ## Contributing
 
-Suggestions and corrections are welcome. Please open an issue or pull request and include official project/source links, the applicable license, evidence of macOS support, and a clear note about required accounts, cloud features, and telemetry. Do not add a tool solely to reach a numerical target; accuracy matters more than having ten entries.
+Help make this the most useful **macOS open-source spreadsheet directory**: submit corrections, report outdated Mac support, or suggest an app. Please include an official project/source link, license, evidence of macOS support, and accurate notes on accounts, cloud features, and telemetry. Quality and verifiability beat padding the list.
 
 ---
 
-This list is released under [CC0 1.0](LICENSE).
+Released under [CC0 1.0](LICENSE).
