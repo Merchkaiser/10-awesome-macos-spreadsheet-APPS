@@ -1,10 +1,10 @@
-# Awesome Open-Source Spreadsheet Apps for macOS
+# 10 Free & Open-Source Spreadsheet Apps for Mac
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![macOS](https://img.shields.io/badge/platform-macOS-111111?logo=apple)](https://www.apple.com/macos/) [![Free & open source](https://img.shields.io/badge/free-%26%20open%20source-2ea44f)](#selection-criteria)
 
-> Find the right free, open-source spreadsheet for your Mac: offline-capable desktop apps, Excel-compatible office suites, and keyboard-first terminal tools—with privacy and platform caveats up front.
+> Compare 10 free, open-source spreadsheet apps for macOS—from full-featured Excel alternatives to offline-capable desktop tools and keyboard-first terminal spreadsheets.
 
-Looking for an **Excel alternative for Mac** that doesn’t make your spreadsheets depend on a cloud account? Start here. This independent directory compares local-capable macOS spreadsheet software by app type, license, and practical Mac support, so you can choose a tool that fits your workflow—not a subscription pitch.
+Looking for an **Excel alternative for Mac** that lets you work with local files instead of depending on a cloud account? Start here. This independent directory compares 10 macOS spreadsheet apps by strengths, license, privacy caveats, and real-world Mac support—so you can find the right tool for your workflow, whether you need a powerful desktop suite or a lightweight terminal app.
 
 **Quick picks:** [LibreOffice Calc](#desktop-spreadsheet-apps) for a full-featured general-purpose spreadsheet · [ONLYOFFICE](#desktop-spreadsheet-apps) for OOXML compatibility · [sc-im](#terminal-spreadsheets--data-tools) for a keyboard-driven terminal spreadsheet.
 
